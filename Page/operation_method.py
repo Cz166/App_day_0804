@@ -81,6 +81,9 @@ class method(Base):
     @allure.step(title='点击登录按钮')
     def click_register_confirm(self):
         self.click_element(Page.register_confirm)
+    @allure.step(title='点击我的按钮')
+    def click_my_button(self):
+        self.click_element(Page.my_button)
 
 
     """登录操作"""
@@ -89,7 +92,7 @@ class method(Base):
     def succeed_sell(self):
         # 屏幕向右滑动三次
         for i in range(3):
-            self.right_downward_slide()
+            self.right_downward_slide(),i
         # 点击进入爱优品按钮
         self.click_access_love_youpin()
         # 点击始终允许按钮
@@ -105,7 +108,7 @@ class method(Base):
         # 点击登录按钮
         self.click_register_confirm()
         # 点击我的按钮
-        self.click_element(Page.my_button)
+        self.click_my_button()
         # 断言
         self.try_except('1319869')
 
