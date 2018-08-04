@@ -86,12 +86,12 @@ class method(Base):
         self.click_element(Page.my_button)
 
     @allure.step(title='输入账号、输入密码')
-    def send_keys_accpounts_password(self,accpounts,password):
-        self.send_keys_text(Page.register_acctount, accpounts)
-        allure.attach('输入账户', '{}'.format(accpounts))
-        # 输入密码
-        self.send_keys_text(Page.register_passwod,password)
-        allure.attach('输入密码', '{}'.format(password))
+    def send_keys_accpounts_password(self):
+        list = [['Page.register_acctount','输入账号','13198690728'],['Page.register_passwod','输入密码','aaa123456']]
+        # 输入账号
+        for i in list:
+            self.send_keys_text(i[0],i[1],i[2])
+
 
     """登录操作"""
 
@@ -107,7 +107,7 @@ class method(Base):
         # 点击我要卖按钮
         self.click_I_sell()
         # 输入账号、密码
-        self.send_keys_accpounts_password('13198690728','aaa123456')
+        self.send_keys_accpounts_password()
         # 点击登录按钮
         self.click_register_confirm()
         # 点击我的按钮

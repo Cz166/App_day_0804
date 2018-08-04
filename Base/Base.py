@@ -18,11 +18,11 @@ class Base:
         self.find_element(loc).click()
     # 清空输入框且输入内容
     @allure.step(title='输入操作')
-    def send_keys_text(self, loc, text):
+    def send_keys_text(self, loc, text, category):
         input_box = self.find_element(loc)
         input_box.clear()
         input_box.send_keys(text)
-
+        allure.attach(category, '{}'.format(text))
 
 
 
