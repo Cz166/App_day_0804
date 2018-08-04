@@ -27,11 +27,9 @@ class method(Base):
 
     @allure.step(title='获取text')
     def gain_single_text(self, loc):
-        allure.attach('描述', '{}'.format('获取的text为：%s' % self.find_element(loc)))
         return self.find_element(loc).text
     @allure.step(title='获取列表中的text')
     def gain_a_group_text(self,loc):
-        allure.attach('描述','{}'.format('获取的列表为：%s'% self.find_elements(loc).text))
         for element in self.find_elements(loc):
             return element.text
 
