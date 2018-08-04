@@ -1,0 +1,11 @@
+[ {
+  "uid" : "f5aca8336cd389f2",
+  "name" : "Test_Login.test_I_sell_register",
+  "time" : {
+    "start" : 1533395696909,
+    "stop" : 1533395761056,
+    "duration" : 64147
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

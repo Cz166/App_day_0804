@@ -1,0 +1,265 @@
+{
+  "uid" : "f5aca8336cd389f2",
+  "name" : "Test_Login.test_I_sell_register",
+  "fullName" : "test_use_case.test_use_case_want_to_sell.Test_Login.test_I_sell_register",
+  "historyId" : "c85a6693f74ec44fef2ad55b714c23a9",
+  "time" : {
+    "start" : 1533395696909,
+    "stop" : 1533395761056,
+    "duration" : 64147
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "测试用例_001_无前置条件_初始化App_点击我要卖_正确帐号登录",
+      "time" : {
+        "start" : 1533395721520,
+        "stop" : 1533395761056,
+        "duration" : 39536
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "输入正确帐号、密码，成功登录",
+        "time" : {
+          "start" : 1533395721520,
+          "stop" : 1533395761056,
+          "duration" : 39536
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "向右滑动",
+          "time" : {
+            "start" : 1533395721520,
+            "stop" : 1533395721589,
+            "duration" : 69
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "向右滑动",
+          "time" : {
+            "start" : 1533395721589,
+            "stop" : 1533395721650,
+            "duration" : 61
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "向右滑动",
+          "time" : {
+            "start" : 1533395721650,
+            "stop" : 1533395721720,
+            "duration" : 70
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "点击启动页面_教程_进入爱优品按钮",
+          "time" : {
+            "start" : 1533395721720,
+            "stop" : 1533395722826,
+            "duration" : 1106
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "点击始终允许",
+          "time" : {
+            "start" : 1533395722826,
+            "stop" : 1533395729240,
+            "duration" : 6414
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "点击我要卖按钮",
+          "time" : {
+            "start" : 1533395729240,
+            "stop" : 1533395729815,
+            "duration" : 575
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "点击登录按钮",
+          "time" : {
+            "start" : 1533395752875,
+            "stop" : 1533395753849,
+            "duration" : 974
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "hasContent" : false,
+          "stepsCount" : 0
+        }, {
+          "name" : "获取列表中的text",
+          "time" : {
+            "start" : 1533395755279,
+            "stop" : 1533395757309,
+            "duration" : 2030
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "de3293177643fa83",
+            "name" : "描述",
+            "source" : "de3293177643fa83.txt",
+            "type" : "text/plain",
+            "size" : 1804
+          } ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "hasContent" : true,
+          "stepsCount" : 0
+        }, {
+          "name" : "截图操作",
+          "time" : {
+            "start" : 1533395757309,
+            "stop" : 1533395761056,
+            "duration" : 3747
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "ec57c1a4f26603d1",
+            "name" : "描述",
+            "source" : "ec57c1a4f26603d1.txt",
+            "type" : "text/plain",
+            "size" : 57
+          } ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 1,
+          "hasContent" : true,
+          "stepsCount" : 0
+        } ],
+        "attachments" : [ {
+          "uid" : "13e733b08403baeb",
+          "name" : "描述",
+          "source" : "13e733b08403baeb.txt",
+          "type" : "text/plain",
+          "size" : 29
+        }, {
+          "uid" : "172f9f9b0d6e6d91",
+          "name" : "描述",
+          "source" : "172f9f9b0d6e6d91.txt",
+          "type" : "text/plain",
+          "size" : 24
+        }, {
+          "uid" : "e2ceca12f462507c",
+          "name" : "",
+          "source" : "e2ceca12f462507c.txt",
+          "type" : "text/plain",
+          "size" : 24
+        } ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 5,
+        "hasContent" : true,
+        "stepsCount" : 9
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 5,
+      "hasContent" : true,
+      "stepsCount" : 10
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 5,
+    "hasContent" : true,
+    "stepsCount" : 11
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-2H2UE1B"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "12944-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test_use_case.test_use_case_want_to_sell"
+  }, {
+    "name" : "testClass",
+    "value" : "test_use_case.test_use_case_want_to_sell"
+  }, {
+    "name" : "testMethod",
+    "value" : "Test_Login.test_I_sell_register"
+  }, {
+    "name" : "package",
+    "value" : "test_use_case.test_use_case_want_to_sell"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f5aca8336cd389f2.json",
+  "parameterValues" : [ ]
+}

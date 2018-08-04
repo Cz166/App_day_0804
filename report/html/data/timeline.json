@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-2H2UE1B",
+    "children" : [ {
+      "name" : "12944-MainThread",
+      "children" : [ {
+        "name" : "Test_Login.test_I_sell_register",
+        "uid" : "f5aca8336cd389f2",
+        "parentUid" : "18ee380d50f21f16d636532f5d2dc723",
+        "status" : "passed",
+        "time" : {
+          "start" : 1533395696909,
+          "stop" : 1533395761056,
+          "duration" : 64147
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "18ee380d50f21f16d636532f5d2dc723"
+    } ],
+    "uid" : "d5f607443880f4a70af282c870286793"
+  } ]
+}

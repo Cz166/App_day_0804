@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "test_use_case.test_use_case_want_to_sell",
+    "children" : [ {
+      "name" : "Test_Login.test_I_sell_register",
+      "uid" : "f5aca8336cd389f2",
+      "parentUid" : "fbc3823d69dd8ad66c31ae02a739cb09",
+      "status" : "passed",
+      "time" : {
+        "start" : 1533395696909,
+        "stop" : 1533395761056,
+        "duration" : 64147
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "test_use_case.test_use_case_want_to_sell"
+  } ]
+}

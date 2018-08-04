@@ -1,0 +1,79 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1533393450690" stop="1533393525470">
+  <name>test_use_case_want_to_sell</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1533393450690" status="passed" stop="1533393525470">
+      <name>Test_Login.test_I_sell_register</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="18492-MainThread"/>
+        <label name="host" value="DESKTOP-2H2UE1B"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1533393479884" status="passed" stop="1533393479991">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393479991" status="passed" stop="1533393480104">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393480104" status="passed" stop="1533393480230">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393480230" status="passed" stop="1533393481284">
+          <name>点击启动页面_教程_进入爱优品按钮</name>
+          <title>点击启动页面_教程_进入爱优品按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393481284" status="passed" stop="1533393487783">
+          <name>点击始终允许</name>
+          <title>点击始终允许</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393487783" status="passed" stop="1533393488250">
+          <name>点击我要卖按钮</name>
+          <title>点击我要卖按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393511893" status="passed" stop="1533393513020">
+          <name>点击登录按钮</name>
+          <title>点击登录按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393513020" status="passed" stop="1533393513144">
+          <name>向下滑动</name>
+          <title>向下滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393513144" status="passed" stop="1533393516783">
+          <name>截图操作</name>
+          <title>截图操作</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1533393516783" status="passed" stop="1533393525470">
+          <name>截图操作</name>
+          <title>截图操作</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

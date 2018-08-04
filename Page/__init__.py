@@ -9,6 +9,8 @@ allow_button = (By.ID,'com.android.packageinstaller:id/permission_allow_button')
 
 """我要卖功能"""
 
+# 我的按钮
+my_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_tv_my')
 # 我要卖
 I_want_to_sell = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_ll_sell')
 # 登录页面_账户

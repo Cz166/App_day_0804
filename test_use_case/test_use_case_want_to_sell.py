@@ -16,4 +16,4 @@ class Test_Login:
 
 
 if __name__ == '__main__':
-    pytest.main('test_use_case_I_want_to_sell.py')
+    pytest.main('test_use_case_want_to_sell.py')

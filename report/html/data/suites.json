@@ -1,0 +1,21 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_use_case.test_use_case_want_to_sell",
+    "children" : [ {
+      "name" : "Test_Login.test_I_sell_register",
+      "uid" : "f5aca8336cd389f2",
+      "parentUid" : "943fedea0812201122ee2b78b8963b45",
+      "status" : "passed",
+      "time" : {
+        "start" : 1533395696909,
+        "stop" : 1533395761056,
+        "duration" : 64147
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "943fedea0812201122ee2b78b8963b45"
+  } ]
+}

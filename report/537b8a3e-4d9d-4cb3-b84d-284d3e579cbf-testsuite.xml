@@ -1,0 +1,95 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1533395696909" stop="1533395761056">
+  <name>test_use_case.test_use_case_want_to_sell</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1533395696909" status="passed" stop="1533395761056">
+      <name>Test_Login.test_I_sell_register</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12944-MainThread"/>
+        <label name="host" value="DESKTOP-2H2UE1B"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1533395721520" status="passed" stop="1533395761056">
+          <name>测试用例_001_无前置条件_初始化App_点击我要卖_正确帐号登录</name>
+          <title>测试用例_001_无前置条件_初始化App_点击我要卖_正确帐号登录</title>
+          <attachments/>
+          <steps>
+            <step start="1533395721520" status="passed" stop="1533395761056">
+              <name>输入正确帐号、密码，成功登录</name>
+              <title>输入正确帐号、密码，成功登录</title>
+              <attachments>
+                <attachment source="cb9eb94a-7eb4-4dd7-9a9b-7e599a4cba50-attachment.txt" title="描述" type="text/plain"/>
+                <attachment source="47d9227a-8ba9-447f-a4c6-c621d343f07e-attachment.txt" title="描述" type="text/plain"/>
+                <attachment source="9f46dae9-729d-483b-9e75-a7505f95b80a-attachment.txt" title="" type="text/plain"/>
+              </attachments>
+              <steps>
+                <step start="1533395721520" status="passed" stop="1533395721589">
+                  <name>向右滑动</name>
+                  <title>向右滑动</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395721589" status="passed" stop="1533395721650">
+                  <name>向右滑动</name>
+                  <title>向右滑动</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395721650" status="passed" stop="1533395721720">
+                  <name>向右滑动</name>
+                  <title>向右滑动</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395721720" status="passed" stop="1533395722826">
+                  <name>点击启动页面_教程_进入爱优品按钮</name>
+                  <title>点击启动页面_教程_进入爱优品按钮</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395722826" status="passed" stop="1533395729240">
+                  <name>点击始终允许</name>
+                  <title>点击始终允许</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395729240" status="passed" stop="1533395729815">
+                  <name>点击我要卖按钮</name>
+                  <title>点击我要卖按钮</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395752875" status="passed" stop="1533395753849">
+                  <name>点击登录按钮</name>
+                  <title>点击登录按钮</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+                <step start="1533395755279" status="passed" stop="1533395757309">
+                  <name>获取列表中的text</name>
+                  <title>获取列表中的text</title>
+                  <attachments>
+                    <attachment source="cdcfb2a2-b573-4472-82e3-7c1529ad1705-attachment.txt" title="描述" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+                <step start="1533395757309" status="passed" stop="1533395761056">
+                  <name>截图操作</name>
+                  <title>截图操作</title>
+                  <attachments>
+                    <attachment source="aa543ac2-5a5a-4e5d-a95d-0d1ef8abd270-attachment.txt" title="描述" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
