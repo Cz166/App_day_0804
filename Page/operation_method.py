@@ -25,13 +25,13 @@ class method(Base):
     获取text属性值
     """
 
-    @allure.step(title='获取text')
     def gain_single_text(self, loc):
         return self.find_element(loc).text
-    @allure.step(title='获取列表中的text')
     def gain_a_group_text(self,loc):
+        text_list = []
         for element in self.find_elements(loc):
-            return element.text
+            text_list.append(element.text)
+            return text_list
 
 
     """屏幕滑动"""
