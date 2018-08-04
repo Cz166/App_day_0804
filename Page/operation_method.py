@@ -87,7 +87,7 @@ class method(Base):
 
     @allure.step(title='输入账号、输入密码')
     def send_keys_accpounts_password(self):
-        list = [[Page.register_acctount,'输入账号','13198690728'],[Page.register_passwod,'输入密码','aaa123456']]
+        list = [[Page.register_acctount,'13198690728','输入账号'],[Page.register_passwod,'aaa123456','输入密码']]
         # 输入账号
         for i in list:
             self.send_keys_text(i[0],i[1],i[2])
