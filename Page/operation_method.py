@@ -56,7 +56,7 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except(self,dim_phone):
-        allure.attach('获取的列表', '{}'.format(self.gain_a_group_text(Page.my_list)))
+        allure.attach('获取登录成功的账号', '{}'.format(self.gain_a_group_text(Page.my_list)))
         try:
             dim_phone in self.gain_a_group_text(Page.my_list)
         except:
@@ -85,6 +85,13 @@ class method(Base):
     def click_my_button(self):
         self.click_element(Page.my_button)
 
+    @allure.step(title='输入账号、输入密码')
+    def send_keys_accpounts_password(self,accpounts,password):
+        self.send_keys_text(Page.register_acctount, accpounts)
+        allure.attach('输入账户', '{}'.format(accpounts))
+        # 输入密码
+        self.send_keys_text(Page.register_passwod,password)
+        allure.attach('输入密码', '{}'.format(password))
 
     """登录操作"""
 
@@ -99,12 +106,8 @@ class method(Base):
         self.click_allow_button()
         # 点击我要卖按钮
         self.click_I_sell()
-        # 输入帐号
-        self.send_keys_text(Page.register_acctount, '13198690728')
-        allure.attach('输入账户', '{}'.format('13198690728'))
-        # 输入密码
-        self.send_keys_text(Page.register_passwod, 'aaa123456')
-        allure.attach('输入密码', '{}'.format('aaa123456'))
+        # 输入账号、密码
+        self.send_keys_accpounts_password('13198690728','aaa123456')
         # 点击登录按钮
         self.click_register_confirm()
         # 点击我的按钮
