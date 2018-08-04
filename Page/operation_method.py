@@ -111,7 +111,6 @@ class method(Base):
         self.click_register_confirm()
         # 点击我的按钮
         self.click_my_button()
-        allure.attach('获取的toast消息',self.get_toast('登录'))
         # 断言
         self.try_except('1319869')
         self.try_except('我的订单')
