@@ -1,0 +1,23 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1533388280335" stop="1533388280335">
+  <description>This is the tests collection phase. Failures are modules that failed to collect.</description>
+  <name>test_collection_phase</name>
+  <title>Collection phase</title>
+  <labels/>
+  <test-cases>
+    <test-case start="1533388280335" status="broken" stop="1533388280335">
+      <name>test_use_case_I_want_to_sell</name>
+      <failure>
+        <message>failed</message>
+        <stack-trace>ImportError while importing test module 'E:\PyCharm 2017.3.4\App_08_04\test_use_case\test_use_case_I_want_to_sell.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+test_use_case\test_use_case_I_want_to_sell.py:3: in &lt;module&gt;
+    from Page.operation_method import method
+E   ModuleNotFoundError: No module named 'Page'</stack-trace>
+      </failure>
+      <attachments/>
+      <labels/>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
