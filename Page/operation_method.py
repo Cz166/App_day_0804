@@ -58,6 +58,7 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except(self,dim_phone):
+        allure.attach('获取的列表', '{}'.format(self.gain_a_group_text(Page.my_list)))
         try:
             dim_phone in self.gain_a_group_text(Page.my_list)
         except:
@@ -108,7 +109,7 @@ class method(Base):
         # 点击我的按钮
         self.click_element(Page.my_button)
         # 断言
-        self.try_except()
+        self.try_except('1319869')
 
 
 
