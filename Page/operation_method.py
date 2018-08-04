@@ -28,10 +28,9 @@ class method(Base):
     def gain_single_text(self, loc):
         return self.find_element(loc).text
     def gain_a_group_text(self,loc):
-        text_list = []
         for element in self.find_elements(loc):
-            text_list.append(element.text)
-            return text_list
+            return element.text
+
 
 
     """屏幕滑动"""
@@ -50,7 +49,7 @@ class method(Base):
     @allure.step(title='截图操作')
     def screenshot(self):
        now =  time.strftime('%Y-%m-%d_%H_%M_%S')
-       allure.attach('描述','{}'.format('图片的名字是：register_001_%s.png' % now))
+       allure.attach('图片名字','{}'.format('register_001_%s.png' % now))
        return self.driver.get_screenshot_as_file\
            ('E:/PyCharm 2017.3.4/App_08_04/Screenshot/register_001_%s.png' % now)
 
