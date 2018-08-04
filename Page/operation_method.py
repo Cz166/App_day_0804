@@ -31,7 +31,7 @@ class method(Base):
         return self.find_element(loc).text
     @allure.step(title='获取列表中的text')
     def gain_a_group_text(self,loc):
-        allure.attach('描述','{}'.format('获取的列表为：%s'% self.find_elements(loc)))
+        allure.attach('描述','{}'.format('获取的列表为：%s'% self.find_elements(loc).text))
         for element in self.find_elements(loc):
             return element.text
 
@@ -55,6 +55,16 @@ class method(Base):
        allure.attach('描述','{}'.format('图片的名字是：register_001_%s.png' % now))
        return self.driver.get_screenshot_as_file\
            ('E:/PyCharm 2017.3.4/App_08_04/Screenshot/register_001_%s.png' % now)
+
+    @allure.step(title='断言是否登录成功')
+    def try_except(self,dim_phone):
+        try:
+            dim_phone in self.gain_a_group_text(Page.my_list)
+        except:
+            assert False
+        finally:
+            self.screenshot()
+
 
     """初始页面"""
     @allure.step(title='点击启动页面_教程_进入爱优品按钮')
@@ -88,22 +98,18 @@ class method(Base):
         # 点击我要卖按钮
         self.click_I_sell()
         # 输入帐号
-        allure.attach('描述', '{}'.format('输入手机号：13198690728'))
         self.send_keys_text(Page.register_acctount, '13198690728')
+        allure.attach('输入账户', '{}'.format('13198690728'))
         # 输入密码
-        allure.attach('描述', '{}'.format('输入密码：aaa123456'))
         self.send_keys_text(Page.register_passwod, 'aaa123456')
+        allure.attach('输入密码', '{}'.format('aaa123456'))
         # 点击登录按钮
         self.click_register_confirm()
         # 点击我的按钮
         self.click_element(Page.my_button)
-        allure.attach('','断言是否登录成功')
-        try:
-            '131986' in self.gain_a_group_text(Page.my_list)
-        except:
-            assert False
-        finally:
-            self.screenshot()
+        # 断言
+        self.try_except()
+
 
 
 
