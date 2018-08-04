@@ -17,7 +17,7 @@ class method(Base):
     """
     @allure.step(title='获取toast消息')
     def get_toast(self,message):
-        xpath = '//*[contains(@text,"{}")]'.format(message)
+        xpath = '//*[contains(@text,"{}")]'.format(str(message))
         return self.find_element(By.XPATH,xpath).text
 
 
