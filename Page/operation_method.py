@@ -32,7 +32,7 @@ class method(Base):
 
     @allure.step(title='获取列表')
     def gain_a_group_text(self):
-        sleep(2)
+        sleep(3)
         return [i.text for i in self.find_elements(Page.my_list)]
 
     """屏幕滑动"""
@@ -57,21 +57,25 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except_dim_phone(self,dim_phone):
+        # el =
         try:
             assert dim_phone in self.gain_a_group_text()
         except:
             assert False
         finally:
             self.screenshot()
+            allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
     @allure.step(title='断言页面是否成功跳转')
     def try_except_dim(self,dim):
+        # el = self.gain_a_group_text()
         try:
             assert dim in self.gain_a_group_text()
         except:
             assert False
         finally:
             self.screenshot()
+            allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
     """初始页面"""
     @allure.step(title='点击启动页面_教程_进入爱优品按钮')
@@ -118,15 +122,15 @@ class method(Base):
         self.send_keys_accpounts_password()
         # 点击登录按钮
         self.click_register_confirm()
+        sleep(4)
         # 点击我的按钮
         self.click_my_button()
-        # 下滑屏幕
-        self.below_slide()
-        sleep(3)
+        sleep(2)
         # 断言
-        self.try_except_dim_phone('1319869')
         self.try_except_dim('我的订单')
         self.try_except_dim('首页')
+        self.try_except_dim_phone('1319869****')
+
 
 
 

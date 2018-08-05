@@ -1,7 +1,10 @@
+from time import sleep
+
 import allure
 import pytest
 from Page.operation_method import method
 from Base.get_driver import get_driver
+from time import sleep
 
 
 class Test_Login:

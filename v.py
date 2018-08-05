@@ -1,5 +1,5 @@
 from time import sleep
-
+from Page.operation_method import method
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
@@ -19,6 +19,13 @@ driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/ip_ll_enter')
 sleep(5)
 driver.find_element(By.ID,'com.android.packageinstaller:id/permission_allow_button').click()
 sleep(2)
+# 点击我要卖按钮
+driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_ll_sell').click()
+# 输入账号、密码
+driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_et_user').send_keys('13198690728')
+driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_et_pwd').send_keys('aaa123456')
+# 点击登录按钮
+driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_ll_login').click()
 driver.find_element(By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_tv_my').click()
 sleep(2)
 el = [i.text for i in driver.find_elements(By.CLASS_NAME,'android.widget.TextView')]
@@ -27,4 +34,9 @@ try:
     print(el)
 except:
     print(6666666)
+try:
+    assert '1319869'in el
+    print(el)
+except:
+    print(00000000000000)
 
