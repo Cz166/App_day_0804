@@ -115,6 +115,8 @@ class method(Base):
         self.click_register_confirm()
         # 点击我的按钮
         self.click_my_button()
+        # 下滑屏幕
+        self.below_slide()
         # 断言
         self.try_except('1319869')
 
