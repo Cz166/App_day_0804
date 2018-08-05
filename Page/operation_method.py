@@ -26,11 +26,11 @@ class method(Base):
     """
     获取text属性值
     """
-
+    # 获取text
     def gain_single_text(self, loc):
         return self.find_element(loc).text
 
-    @allure.step(title='获取列表')
+    # 获取列表
     def gain_a_group_text(self):
         sleep(3)
         return [i.text for i in self.find_elements(Page.my_list)]
