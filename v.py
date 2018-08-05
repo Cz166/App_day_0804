@@ -1,4 +1,24 @@
-list = [['Page.register_acctount', '输入账号', '13198690728'], ['Page.register_passwod', '输入密码', 'aaa123456']]
-# 输入账号
-for i in list:
-    print((list[i][0], list[i][1], list[i][2]))
+def sd():
+    list = [2,3,4,5]
+    return list
+
+def ss():
+    s = sd()
+    list_1 = []
+    # print(s)
+    return [j  for j in s]
+    # for i in s:
+    #     print(i)
+        # list_1.append(i)
+        # return list_1
+
+a,b,c,d = ss()
+e = ss()
+print(a,b,c,d)
+h = [i for i in range(len(e))]
+try:
+    assert 9 in h
+except:
+    print(5)
+
+

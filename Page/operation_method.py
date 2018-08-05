@@ -1,4 +1,6 @@
 import time
+from time import sleep
+
 from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -27,9 +29,12 @@ class method(Base):
 
     def gain_single_text(self, loc):
         return self.find_element(loc).text
-    def gain_a_group_text(self,loc):
-        for element in self.find_elements(loc):
-            return element.text
+
+    @allure.step(title='获取列表')
+    def gain_a_group_text(self):
+        allure.attach('列表为', '{}'.format([i.text for i in self.gain_a_group_text()]))
+        return self.find_elements(Page.my_list)
+
 
 
 
@@ -55,13 +60,12 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except(self,dim_phone):
-        allure.attach('获取登录成功的账号', '{}'.format(self.gain_a_group_text(Page.my_list)))
+
         try:
-            dim_phone in self.gain_a_group_text(Page.my_list)
+            dim_phone in [i.text for i in self.gain_a_group_text()]
         except:
-            assert False
-        finally:
             self.screenshot()
+            print('判断结果失败')
 
 
     """初始页面"""
@@ -98,7 +102,7 @@ class method(Base):
     def succeed_sell(self):
         # 屏幕向右滑动三次
         for i in range(3):
-            self.right_downward_slide(),i
+            self.right_downward_slide()
         # 点击进入爱优品按钮
         self.click_access_love_youpin()
         # 点击始终允许按钮
@@ -114,7 +118,6 @@ class method(Base):
         # 断言
         self.try_except('1319869')
         self.try_except('我的订单')
-
 
 
 
