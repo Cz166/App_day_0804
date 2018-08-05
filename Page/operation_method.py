@@ -31,12 +31,9 @@ class method(Base):
         return self.find_element(loc).text
 
     @allure.step(title='获取列表')
-    def gain_a_group_text(self,loc):
-        allure.attach('列表为', '{}'.format(self.gain_a_group_text()))
-        for element in self.find_elements(loc):
-            return element.text
-
-
+    def gain_a_group_text(self):
+        sleep(2)
+        return [i.text for i in self.find_elements(Page.my_list)]
 
     """屏幕滑动"""
 
@@ -59,14 +56,22 @@ class method(Base):
            ('E:/PyCharm 2017.3.4/App_08_04/Screenshot/register_001_%s.png' % now)
 
     @allure.step(title='断言是否登录成功')
-    def try_except(self,dim_phone):
+    def try_except_dim_phone(self,dim_phone):
         try:
-            dim_phone in self.gain_a_group_text(Page.my_list)
+            assert dim_phone in self.gain_a_group_text()
         except:
             assert False
         finally:
             self.screenshot()
 
+    @allure.step(title='断言页面是否成功跳转')
+    def try_except_dim(self,dim):
+        try:
+            assert dim in self.gain_a_group_text()
+        except:
+            assert False
+        finally:
+            self.screenshot()
 
     """初始页面"""
     @allure.step(title='点击启动页面_教程_进入爱优品按钮')
@@ -117,9 +122,11 @@ class method(Base):
         self.click_my_button()
         # 下滑屏幕
         self.below_slide()
+        sleep(3)
         # 断言
-        self.try_except('1319869')
-
+        self.try_except_dim_phone('1319869')
+        self.try_except_dim('我的订单')
+        self.try_except_dim('首页')
 
 
 
