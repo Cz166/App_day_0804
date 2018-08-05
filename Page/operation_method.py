@@ -31,10 +31,10 @@ class method(Base):
         return self.find_element(loc).text
 
     @allure.step(title='获取列表')
-    def gain_a_group_text(self):
-        allure.attach('列表为', '{}'.format([i.text for i in self.gain_a_group_text()]))
-        return self.find_elements(Page.my_list)
-
+    def gain_a_group_text(self,loc):
+        allure.attach('列表为', '{}'.format(self.gain_a_group_text()))
+        for element in self.find_elements(loc):
+            return element.text
 
 
 
@@ -60,12 +60,12 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except(self,dim_phone):
-
         try:
-            dim_phone in [i.text for i in self.gain_a_group_text()]
+            dim_phone in self.gain_a_group_text(Page.my_list)
         except:
+            assert False
+        finally:
             self.screenshot()
-            print('判断结果失败')
 
 
     """初始页面"""
@@ -117,7 +117,6 @@ class method(Base):
         self.click_my_button()
         # 断言
         self.try_except('1319869')
-        self.try_except('我的订单')
 
 
 
