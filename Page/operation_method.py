@@ -1,26 +1,18 @@
-import time
+import time,Page,allure
 from time import sleep
 
-from appium.webdriver.common.touch_action import TouchAction
-from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-import Page
+from Data.input_yml import get_data
+import pytest
+from appium.webdriver.common.touch_action import TouchAction
+from selenium.webdriver.common.by import By
 from Base.Base import Base
-import allure
 
 class method(Base):
     def __init__(self,driver):
-       Base.__init__(self,driver)
-
-
-    """
-    获取toast消息
-    """
-    @allure.step(title='获取toast消息')
-    def get_toast(self,message):
-        xpath = '//*[contains(@text,"{}")]'.format(str(message))
-        return self.find_element(By.XPATH,xpath).text
+        Base.__init__(self,driver)
 
 
     """
@@ -57,22 +49,26 @@ class method(Base):
 
     @allure.step(title='断言是否登录成功')
     def try_except_dim_phone(self,dim_phone):
-        # el =
         try:
             assert dim_phone in self.gain_a_group_text()
+            allure.attach("状态", "找到")
+            return True
         except:
-            assert False
+            allure.attach("状态", "未找到")
+            return True
         finally:
             self.screenshot()
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
     @allure.step(title='断言页面是否成功跳转')
     def try_except_dim(self,dim):
-        # el = self.gain_a_group_text()
         try:
             assert dim in self.gain_a_group_text()
+            allure.attach("状态", "找到")
+            return True
         except:
-            assert False
+            allure.attach("状态", "未找到")
+            return False
         finally:
             self.screenshot()
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
@@ -96,6 +92,20 @@ class method(Base):
     @allure.step(title='点击我的按钮')
     def click_my_button(self):
         self.click_element(Page.my_button)
+    @allure.step(title='点击退出当前账号按钮')
+    def click_quit_accounts(self):
+        self.click_element(Page.quit_accounts)
+    @allure.step(title='点击确定按钮')
+    def click_confirm_quit(self):
+        self.click_element(Page.confirm_quit)
+
+    """我的页面"""
+    @allure.step(title='点击马上登录')
+    def clcik_immediately_register(self):
+        self.click_element(Page.immediately_register)
+    @allure.step(title='点击返回按钮')
+    def click_return_button(self):
+        self.click_element(Page.return_button)
 
     @allure.step(title='输入账号、输入密码')
     def send_keys_accpounts_password(self):
@@ -104,32 +114,35 @@ class method(Base):
         for i in list:
             self.send_keys_text(i[0],i[1],i[2])
 
+    @allure.step(title='输入账号、输入密码')
+    def send_keys_accpounts_password_1(self,accounts,password,category_1,category_2):
+        # 输入账号
+        self.send_keys_text(Page.register_acctount,accounts,category_1)
+        # 输入密码
+        self.send_keys_text(Page.register_passwod,password,category_2)
 
-    """登录操作"""
 
-    @allure.step(title='输入正确帐号、密码，成功登录')
-    def succeed_sell(self):
-        # 屏幕向右滑动三次
-        for i in range(3):
-            self.right_downward_slide()
-        # 点击进入爱优品按钮
-        self.click_access_love_youpin()
-        # 点击始终允许按钮
-        self.click_allow_button()
-        # 点击我要卖按钮
-        self.click_I_sell()
-        # 输入账号、密码
-        self.send_keys_accpounts_password()
-        # 点击登录按钮
-        self.click_register_confirm()
-        sleep(4)
-        # 点击我的按钮
-        self.click_my_button()
-        sleep(2)
-        # 断言
-        self.try_except_dim('我的订单')
-        self.try_except_dim('首页')
-        self.try_except_dim_phone('1319869****')
+    def get_toast_news(self, message):
+        # 获取提示消息
+        try:
+            xpath = "//*[contains(@text,'{}')]".format(message)
+            toast_message = self.find_element((By.XPATH,xpath), timeout=5, poll=0.1)
+            return toast_message.text
+        except Exception as e:
+            return False
+
+
+    def login_close_page(self):
+        try:
+            # 关闭登陆信息输入页
+            self.click_return_button()
+            allure.attach("关闭状态:", "成功")
+        except Exception as e:
+            allure.attach("关闭状态:", "失败")
+            allure.attach("关闭失败原因:", "%s" % e)
+
+
+
 
 
 

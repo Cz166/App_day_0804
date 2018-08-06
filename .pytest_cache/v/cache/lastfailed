@@ -1,3 +1,6 @@
 {
-  "test_use_case/test_use_case_I_want_to_sell.py": true
+  "test_use_case/test_use_case_I_want_to_sell.py": true,
+  "test_use_case/test_use_case_register.py::Test_Login::()::test_register": true,
+  "test_use_case/test_use_case_register.py::Test_Login::()::test_register[test_login_001-Page.register_acctount-Page.register_passwod-13198690728-aaa123456-\\u8f93\\u5165\\u8d26\\u53f7-\\u8f93\\u5165\\u5bc6\\u7801-\\u6210\\u529f-\\u767b\\u5f55\\u6210\\u529f-1]": true,
+  "test_use_case/test_use_case_register.py::Test_Login::()::test_register[test_login_002-Page.register_acctount-Page.register_passwod-131986907288-aaa123456-\\u8f93\\u5165\\u8d26\\u53f7-\\u8f93\\u5165\\u5bc6\\u7801-\\u9519\\u8bef-\\u7528\\u6237\\u540d\\u6216\\u5bc6\\u7801\\u9519\\u8bef-None]": true
 }

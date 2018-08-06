@@ -5,11 +5,11 @@ import pytest
 from Page.operation_method import method
 from Base.get_driver import get_driver
 from time import sleep
-
+from Page.login_page import Login_page
 
 class Test_Login:
     def setup_class(self):
-        self.Dv = method(get_driver())
+        self.Dv = Login_page(get_driver())
     def teardown_class(self):
         self.Dv.driver.quit()
     @pytest.mark.run(order=1)
