@@ -34,7 +34,7 @@ class Test_Login:
         # 断言
         if tag:
             try:
-                # 断言账户是否在页面
+                # 断言登录成功的账户是否在页面
                 self.Dv.return_register_page().try_except_dim_phone(dim)
                 # 上划屏幕
                 self.Dv.return_register_page().up_slide()
@@ -71,6 +71,6 @@ class Test_Login:
             finally:
                 # 返回我的页面
                 self.Dv.return_register_page().login_close_page()
-                # 断言页面是否包含
+                # 断言页面是否包含马上登录
                 self.Dv.return_register_page().try_except_dim(immediately_register)
 
