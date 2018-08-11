@@ -71,6 +71,6 @@ class Test_Login:
             finally:
                 # 返回我的页面
                 self.Dv.return_register_page().login_close_page()
-                # 断言页面是否成功跳转
-                self.Dv.return_register_page().try_except_dim(dim)
+                # 断言页面是否包含
+                self.Dv.return_register_page().try_except_dim(immediately_register)
 
