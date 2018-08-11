@@ -56,7 +56,7 @@ class Test_Login:
                 assert False
         else:
             try:
-                #登录失败，断言快速注册是否包含于页面
+                #登录失败，断言快速注册元素是否包含于页面
                 if self.Dv.return_register_page().try_celerity_register():
                     assert True
                     # 截图操作

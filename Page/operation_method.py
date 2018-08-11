@@ -110,13 +110,6 @@ class method(Base):
         self.click_element(Page.return_button)
 
     @allure.step(title='输入账号、输入密码')
-    def send_keys_accpounts_password(self):
-        list = [[Page.register_acctount,'13198690728','输入账号'],[Page.register_passwod,'aaa123456','输入密码']]
-        # 输入账号
-        for i in list:
-            self.send_keys_text(i[0],i[1],i[2])
-
-    @allure.step(title='输入账号、输入密码')
     def send_keys_accpounts_password_1(self,accounts,password,category_1,category_2):
         # 输入账号
         self.send_keys_text(Page.register_acctount,accounts,category_1)
@@ -142,16 +135,16 @@ class method(Base):
         try:
             # 关闭登陆信息输入页
             self.click_return_button()
-            allure.attach("关闭状态:", "成功")
+            allure.attach("关闭登陆信息输入页状态:", "成功")
         except Exception as e:
-            allure.attach("关闭状态:", "失败")
-            allure.attach("关闭失败原因:", "%s" % e)
+            allure.attach("关闭登陆信息输入页状态:", "失败")
+            allure.attach("关闭登陆信息输入页失败原因:", "%s" % e)
     # 断言登录失败后页面是否包含快速注册
     def try_celerity_register(self):
         try:
             self.find_element(Page.celerity_register)
+            allure.attach('状态', '找到')
             assert True
-            allure.attach('状态','找到')
         except AssertionError as A:
             allure.attach('状态', '未找到')
             assert False
