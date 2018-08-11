@@ -55,7 +55,7 @@ class method(Base):
             return True
         except:
             allure.attach("状态", "未找到")
-            return True
+            return False
         finally:
             self.screenshot()
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
@@ -64,10 +64,12 @@ class method(Base):
     def try_except_dim(self,dim):
         try:
             assert dim in self.gain_a_group_text()
+            print("aaaaaaaaaaaaaaaaaaaaaa")
             allure.attach("状态", "找到")
             return True
         except:
             allure.attach("状态", "未找到")
+            print("11111111111111111111111111111")
             return False
         finally:
             self.screenshot()
@@ -122,11 +124,15 @@ class method(Base):
         self.send_keys_text(Page.register_passwod,password,category_2)
 
 
-    def get_toast_news(self, message):
+    def get_toast_news(self, get_news):
         # 获取提示消息
         try:
-            xpath = "//*[contains(@text,'{}')]".format(message)
+            xpath = "//*[contains(@text,'{}')]".format(get_news)
             toast_message = self.find_element((By.XPATH,xpath), timeout=5, poll=0.1)
+            if toast_message:
+                assert True
+            else:
+                assert False
             return toast_message.text
         except Exception as e:
             return False

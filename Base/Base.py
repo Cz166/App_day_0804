@@ -27,14 +27,16 @@ class Base:
 
     # 获取toast消息
     @allure.step(title='获取toast消息并断言')
-    def try_find_toast(self,message,timeout=15,poll=1):
+    def try_find_toast(self,get_news,timeout=15,poll=0.1):
         try:
             WebDriverWait(self.driver,timeout,poll).until(expected_conditions.presence_of_element_located
-                                                                    ((By.PARTIAL_LINK_TEXT, message)))
+                                                               ((By.PARTIAL_LINK_TEXT, get_news)))
             allure.attach('结果','找到')
+            print('///////////////////////////')
             return True
         except:
             allure.attach('结果', '未找到')
+            print('-------------------------------')
             return False
 
 

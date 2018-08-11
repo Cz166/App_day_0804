@@ -1,4 +1,3 @@
-from time import sleep
 import pytest,allure,os,sys
 from Base.get_driver import get_driver
 from Data.input_yml import get_data
@@ -23,8 +22,8 @@ class Test_Login:
         self.Dv.driver.quit()
 
     @allure.step(title='登录功能的正确性验证')
-    @pytest.mark.parametrize('case_name,accounts,password,category_1,category_2,get_news,try_accounts,dim,tag,quit_succeed',get_data())
-    def test_register(self, case_name, accounts, password, category_1, category_2, get_news, try_accounts,dim, tag, quit_succeed):
+    @pytest.mark.parametrize('case_name,accounts,password,category_1,category_2,dim,tag,immediately_register',get_data())
+    def test_register(self, case_name, accounts, password, category_1, category_2,dim, tag,immediately_register):
         allure.attach("用例编号", "{}".format(case_name))
         # 点击马上登录按钮
         self.Dv.return_register_page().clcik_immediately_register()
@@ -32,14 +31,11 @@ class Test_Login:
         self.Dv.return_register_page().send_keys_accpounts_password_1(accounts, password, category_1, category_2)
         # 点击登录按钮
         self.Dv.return_register_page().click_register_confirm()
-        sleep(2)
-        # 获取toast,并断言是否登录成功或退出成功
-        self.Dv.return_register_page().try_find_toast(get_news)
         # 断言
         if tag:
             try:
-                # 判断账户是否在页面
-                self.Dv.return_register_page().try_except_dim_phone(try_accounts)
+                # 断言账户是否在页面
+                self.Dv.return_register_page().try_except_dim_phone(dim)
                 # 上划屏幕
                 self.Dv.return_register_page().up_slide()
                 # 点击退出当前账号
@@ -48,20 +44,33 @@ class Test_Login:
                 self.Dv.return_register_page().click_confirm_quit()
                 # 下滑屏幕
                 self.Dv.return_register_page().below_slide()
-                # 获取toast消息并断言是否退出成功
-                self.Dv.return_register_page().try_find_toast(quit_succeed)
-                # 断言页面是否成功跳转
-                self.Dv.return_register_page().try_except_dim(dim)
+                # 断言马上登录是否在页面
+                assert self.Dv.return_register_page().try_except_dim(immediately_register)
             except Exception as E:
                 # 截图
                 self.Dv.return_register_page().screenshot()
                 # 返回我的页面
                 self.Dv.return_register_page().login_close_page()
+                # 断言马上登录是否在页面
+                self.Dv.return_register_page().try_except_dim(immediately_register)
+                assert False
+        else:
+            try:
+                #登录失败， 获取马上登录是否存在页面
+                if not self.Dv.return_register_page().try_except_dim(immediately_register):
+                    # 截图操作
+                    self.Dv.return_register_page().screenshot()
+                    assert True
+                else:
+                    # 截图操作
+                    self.Dv.return_register_page().screenshot()
+                    assert False
+            except AssertionError as A:
+                # 截图操作
+                self.Dv.return_register_page().screenshot()
+            finally:
+                # 返回我的页面
+                self.Dv.return_register_page().login_close_page()
                 # 断言页面是否成功跳转
                 self.Dv.return_register_page().try_except_dim(dim)
-        else:
-            # 返回我的页面
-            self.Dv.return_register_page().login_close_page()
-            # 断言页面是否成功跳转
-            self.Dv.return_register_page().try_except_dim(dim)
 
