@@ -15,6 +15,8 @@ my_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_tv_my')
 I_want_to_sell = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lfi_ll_sell')
 # 马上登录
 immediately_register = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/fm_rl_login')
+# 快速注册
+celerity_register = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lt_tv_register')
 # 登录页面_账户
 register_acctount = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_et_user')
 # 登录页面_密码

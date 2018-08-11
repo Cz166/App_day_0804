@@ -56,8 +56,8 @@ class Test_Login:
                 assert False
         else:
             try:
-                #登录失败， 获取马上登录是否存在页面
-                if not self.Dv.return_register_page().try_except_dim(immediately_register):
+                #登录失败，断言快速注册是否包含于页面
+                if self.Dv.return_register_page().try_celerity_register():
                     # 截图操作
                     self.Dv.return_register_page().screenshot()
                     assert True

@@ -146,7 +146,15 @@ class method(Base):
         except Exception as e:
             allure.attach("关闭状态:", "失败")
             allure.attach("关闭失败原因:", "%s" % e)
-
+    # 断言登录失败后页面是否包含快速注册
+    def try_celerity_register(self):
+        try:
+            self.find_element(Page.celerity_register)
+            assert True
+            allure.attach('状态','找到')
+        except AssertionError as A:
+            allure.attach('状态', '未找到')
+            assert False
 
 
 
