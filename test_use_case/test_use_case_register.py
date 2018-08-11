@@ -58,16 +58,13 @@ class Test_Login:
             try:
                 #登录失败，断言快速注册是否包含于页面
                 if self.Dv.return_register_page().try_celerity_register():
+                    assert True
                     # 截图操作
                     self.Dv.return_register_page().screenshot()
-                    assert True
                 else:
                     # 截图操作
                     self.Dv.return_register_page().screenshot()
                     assert False
-            except AssertionError as A:
-                # 截图操作
-                self.Dv.return_register_page().screenshot()
             finally:
                 # 返回我的页面
                 self.Dv.return_register_page().login_close_page()
