@@ -1,12 +1,12 @@
 Login_Data:
-  - test_login_001: {'accounts':'13198690728','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
-  - test_login_002: {'accounts':' 13198690728','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
-  - test_login_003: {'accounts':'13198690728 ','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
+#  - test_login_001: {'accounts':'13198690728','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
+#  - test_login_002: {'accounts':' 13198690728','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
+#  - test_login_003: {'accounts':'13198690728 ','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
   - test_login_004: {'accounts':'13198690728','password':' aaa123456','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
   - test_login_005: {'accounts':'13198690728','password':'aaa123456 ','category_1':'输入账号','category_2':'输入密码','dim':'1319869****','tag':1,'immediately_register':'马上登录'}
   - test_login_006: {'accounts':'1319869072','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
-  - test_login_007: {'accounts':'1319我Aa!*#','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
-  - test_login_008: {'accounts':'','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
-  - test_login_009: {'accounts':'13198690728','password':'','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
-  - test_login_010: {'accounts':'131986907288','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
+#  - test_login_007: {'accounts':'1319我Aa!*#','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
+#  - test_login_008: {'accounts':'','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
+#  - test_login_009: {'accounts':'13198690728','password':'','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
+#  - test_login_010: {'accounts':'131986907288','password':'aaa123456','category_1':'输入账号','category_2':'输入密码','immediately_register':'马上登录'}
 

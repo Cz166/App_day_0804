@@ -51,10 +51,10 @@ class method(Base):
     def try_except_dim_phone(self,dim_phone):
         try:
             assert dim_phone in self.gain_a_group_text()
-            allure.attach("状态", "找到")
+            allure.attach("页面元素查找状态", "找到")
             return True
         except:
-            allure.attach("状态", "未找到")
+            allure.attach("页面元素查找状态", "未找到")
             return False
         finally:
             self.screenshot()
@@ -64,12 +64,10 @@ class method(Base):
     def try_except_dim(self,dim):
         try:
             assert dim in self.gain_a_group_text()
-            print("aaaaaaaaaaaaaaaaaaaaaa")
-            allure.attach("状态", "找到")
+            allure.attach("页面元素查找状态", "找到")
             return True
         except:
-            allure.attach("状态", "未找到")
-            print("11111111111111111111111111111")
+            allure.attach("页面元素查找状态", "未找到")
             return False
         finally:
             self.screenshot()
@@ -130,7 +128,6 @@ class method(Base):
         except Exception as e:
             return False
 
-
     def login_close_page(self):
         try:
             # 关闭登陆信息输入页
@@ -142,13 +139,21 @@ class method(Base):
     # 断言登录失败后页面是否包含快速注册
     def try_celerity_register(self):
         try:
+            allure.attach('页面元素(快速注册)状态', '找到')
             self.find_element(Page.celerity_register)
-            allure.attach('状态', '找到')
             assert True
         except AssertionError as A:
             allure.attach('状态', '未找到')
             assert False
 
+    def try_my_button(self):
+        try:
+            allure.attach('我的按钮', '找到')
+            self.find_element(Page.my_button)
+            assert True
+        except AssertionError as A:
+            allure.attach('我的按钮', '未找到')
+            assert False
 
 
 
