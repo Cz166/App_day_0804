@@ -49,9 +49,11 @@ class Test_Login:
                 # 截图
                 self.Dv.return_register_page().screenshot()
                 allure.attach('错误信息：', '{}'.format(E))
-            finally:
                 # 返回主页面
                 self.Dv.return_register_page().login_close_page()
+                # 断言页面是否包含我的按钮
+                self.Dv.return_register_page().try_my_button()
+                assert False
         else:
             try:
                 # 登录失败，断言快速注册是否包含于页面
@@ -60,6 +62,7 @@ class Test_Login:
                 # 截图操作
                 self.Dv.return_register_page().screenshot()
                 allure.attach('错误信息：','{}'.format(E))
+                assert False
             finally:
                 # 回到主页面
                 self.Dv.return_register_page().login_close_page()
