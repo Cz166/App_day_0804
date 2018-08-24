@@ -155,10 +155,10 @@ class method(Base):
         try:
             assert self.find_element(Page.my_button)
             allure.attach('我的按钮', '找到')
-            return True
+            assert True
         except:
             allure.attach('我的按钮', '未找到')
-            return False
+            assert False
 
 
 
