@@ -26,12 +26,9 @@ class Test_Login:
         self.Dv.return_register_page().send_keys_accpounts_password_1(accounts, password, category_1, category_2)
         # 点击登录按钮
         self.Dv.return_register_page().click_register_confirm()
-        # 断言我的按钮是否存在
-        self.Dv.return_register_page().try_my_button()
         # 断言
         if tag:
             try:
-                self.Dv.return_register_page().click_register_confirm()
                 # 点击我的按钮
                 self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面
