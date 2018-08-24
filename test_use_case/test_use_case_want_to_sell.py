@@ -48,6 +48,7 @@ class Test_Login:
                 else:
                     self.Dv.return_register_page().screenshot()
                     self.Dv.return_register_page().login_close_page()
+                    return False
             except Exception as E:
                 # 截图
                 self.Dv.return_register_page().screenshot()
