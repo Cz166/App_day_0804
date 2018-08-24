@@ -29,8 +29,8 @@ class Test_Login:
         # 断言
         if tag:
             try:
-                # 判断是否找到我的按钮
-                self.Dv.return_register_page().try_my_button()
+                # 断言快速注册是否存在
+                self.Dv.return_register_page().try_celerity_register()
                 # 点击我的按钮
                 self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面

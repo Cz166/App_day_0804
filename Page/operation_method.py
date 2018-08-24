@@ -153,6 +153,7 @@ class method(Base):
             assert True
         except AssertionError as A:
             allure.attach('我的按钮', '未找到')
+            assert False
 
 
 
