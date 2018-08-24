@@ -127,7 +127,7 @@ class method(Base):
             return toast_message.text
         except Exception as e:
             return False
-    allure.step(title='断言关闭登陆信息输入页状态')
+    @allure.step(title='断言关闭登陆信息输入页状态')
     def login_close_page(self):
         try:
             # 关闭登陆信息输入页
@@ -136,7 +136,7 @@ class method(Base):
         except Exception as e:
             allure.attach("状态:", "失败_失败原因：",'{}'.format(e))
     # 断言登录失败后页面是否包含快速注册
-    allure.step(title='断言快速注册状态')
+    @allure.step(title='断言快速注册状态')
     def try_celerity_register(self):
         try:
             allure.attach('快速注册', '找到')
@@ -145,7 +145,7 @@ class method(Base):
         except AssertionError as A:
             allure.attach('快速注册', '未找到')
             assert False
-    allure.step(title='断言我的按钮状态')
+    @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
         try:
             allure.attach('我的按钮', '找到')
