@@ -152,12 +152,13 @@ class method(Base):
             return True
     @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
-        if self.find_element(Page.my_button):
+        try:
+            assert self.find_element(Page.my_button)
             allure.attach('我的按钮', '找到')
-            assert True
-        else:
+            return True
+        except:
             allure.attach('我的按钮', '未找到')
-            assert False
+            return False
 
 
 
