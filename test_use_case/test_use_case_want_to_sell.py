@@ -47,7 +47,7 @@ class Test_Login:
                     self.Dv.return_register_page().try_except_dim(immediately_register)
                 else:
                     self.Dv.return_register_page().screenshot()
-                    self.Dv.return_register_page().login_close_page()
+
                     self.Dv.return_register_page().click_my_button()
             except Exception as E:
                 # 截图
