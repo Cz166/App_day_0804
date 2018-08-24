@@ -59,7 +59,7 @@ class Test_Login:
             except Exception as E:
                 # 截图操作
                 self.Dv.return_register_page().screenshot()
-                allure.attach('错误信息：','{}'.format(E))
+                allure.attach('错误信息','{}'.format(E))
                 assert False
             finally:
                 # 回到主页面

@@ -141,7 +141,6 @@ class method(Base):
             assert True
         except:
             allure.attach('我的按钮', '未找到')
-            assert False
 
 
 
