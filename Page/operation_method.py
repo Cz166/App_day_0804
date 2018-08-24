@@ -62,13 +62,13 @@ class method(Base):
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
     @allure.step(title='断言我的按钮是否存在')
-    def try_except_register(self):
+    def try_except_my_button(self):
         try:
             assert '我的' in self.gain_a_group_text()
-            allure.attach("我的按钮", "找到")
+            allure.attach("我的", "找到")
             return True
         except:
-            allure.attach("我的按钮", "未找到")
+            allure.attach("我的", "未找到")
             return False
         finally:
             self.screenshot()
@@ -155,9 +155,10 @@ class method(Base):
         try:
             assert self.find_element(Page.my_button)
             allure.attach('我的按钮', '找到')
+            return True
         except:
             allure.attach('我的按钮', '未找到')
-            assert False
+            return False
 
 
 

@@ -1,0 +1,164 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1535100112913" stop="1535100176882">
+  <name>test_use_case.test_use_case_want_to_sell</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1535100112913" status="failed" stop="1535100176882">
+      <name>Test_Login.test_register[test_login_004-13198690728- aaa123456-\u8f93\u5165\u8d26\u53f7-\u8f93\u5165\u5bc6\u7801-1319869****-1-\u9a6c\u4e0a\u767b\u5f55]</name>
+      <failure>
+        <message>AssertionError: assert False</message>
+        <stack-trace>self = &lt;test_use_case.test_use_case_want_to_sell.Test_Login object at 0x03A86FB0&gt;
+case_name = 'test_login_004', accounts = '13198690728', password = ' aaa123456'
+category_1 = '输入账号', category_2 = '输入密码', dim = '1319869****', tag = 1
+immediately_register = '马上登录'
+
+    @allure.step(title='测试用例_001_无前置条件_初始化App_点击我要卖_登录功能正确性验证')
+    @pytest.mark.parametrize('case_name,accounts,password,category_1,category_2,dim,tag,immediately_register',get_data())
+    def test_register(self, case_name, accounts, password, category_1, category_2, dim,tag,immediately_register):
+        allure.attach("用例编号", "{}".format(case_name))
+        # 点击我要卖按钮
+        self.Dv.return_register_page().click_I_sell()
+        # 输入账号、密码
+        self.Dv.return_register_page().send_keys_accpounts_password_1(accounts, password, category_1, category_2)
+        # 点击登录按钮
+        self.Dv.return_register_page().click_register_confirm()
+        # 断言
+        if tag:
+            if self.Dv.return_register_page().try_except_register():
+&gt;               assert False
+E               assert False
+
+test_use_case\test_use_case_want_to_sell.py:32: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4416-MainThread"/>
+        <label name="host" value="DESKTOP-2H2UE1B"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1535100134887" status="passed" stop="1535100134966">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535100134966" status="passed" stop="1535100135044">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535100135044" status="passed" stop="1535100135122">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535100135122" status="passed" stop="1535100136243">
+          <name>点击启动页面_教程_进入爱优品按钮</name>
+          <title>点击启动页面_教程_进入爱优品按钮</title>
+          <attachments/>
+          <steps>
+            <step start="1535100135122" status="passed" stop="1535100136243">
+              <name>点击操作</name>
+              <title>点击操作</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1535100136243" status="passed" stop="1535100142704">
+          <name>点击始终允许</name>
+          <title>点击始终允许</title>
+          <attachments/>
+          <steps>
+            <step start="1535100136243" status="passed" stop="1535100142704">
+              <name>点击操作</name>
+              <title>点击操作</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1535100142704" status="failed" stop="1535100176710">
+          <name>测试用例_001_无前置条件_初始化App_点击我要卖_登录功能正确性验证</name>
+          <title>测试用例_001_无前置条件_初始化App_点击我要卖_登录功能正确性验证</title>
+          <attachments>
+            <attachment source="c498c6af-3bed-4ed7-b426-93c71a44c1fe-attachment.txt" title="用例编号" type="text/plain"/>
+          </attachments>
+          <steps>
+            <step start="1535100142704" status="passed" stop="1535100143220">
+              <name>点击我要卖按钮</name>
+              <title>点击我要卖按钮</title>
+              <attachments/>
+              <steps>
+                <step start="1535100142704" status="passed" stop="1535100143220">
+                  <name>点击操作</name>
+                  <title>点击操作</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535100143220" status="passed" stop="1535100164346">
+              <name>输入账号、输入密码</name>
+              <title>输入账号、输入密码</title>
+              <attachments/>
+              <steps>
+                <step start="1535100143220" status="passed" stop="1535100152925">
+                  <name>输入操作</name>
+                  <title>输入操作</title>
+                  <attachments>
+                    <attachment source="be41b352-7582-4724-917b-8d362a0e2126-attachment.txt" title="输入账号" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+                <step start="1535100152925" status="passed" stop="1535100164346">
+                  <name>输入操作</name>
+                  <title>输入操作</title>
+                  <attachments>
+                    <attachment source="12f4db99-97da-4ab7-bd53-2efa88c162c9-attachment.txt" title="输入密码" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535100164346" status="passed" stop="1535100165531">
+              <name>点击登录按钮</name>
+              <title>点击登录按钮</title>
+              <attachments/>
+              <steps>
+                <step start="1535100164346" status="passed" stop="1535100165531">
+                  <name>点击操作</name>
+                  <title>点击操作</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535100165531" status="passed" stop="1535100176710">
+              <name>断言我的按钮是否存在</name>
+              <title>断言我的按钮是否存在</title>
+              <attachments>
+                <attachment source="b439b524-3012-4c87-90f4-33a1cec634e4-attachment.txt" title="快速注册" type="text/plain"/>
+                <attachment source="4f24d219-54c4-4306-9802-ef6dd4067d73-attachment.txt" title="页面元素_(text_list)" type="text/plain"/>
+              </attachments>
+              <steps>
+                <step start="1535100169277" status="passed" stop="1535100173105">
+                  <name>截图操作</name>
+                  <title>截图操作</title>
+                  <attachments>
+                    <attachment source="7b50f888-811a-40b1-8240-80dd88542148-attachment.txt" title="图片名字" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

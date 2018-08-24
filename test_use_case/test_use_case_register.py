@@ -35,7 +35,7 @@ class Test_Login:
         if tag:
             try:
                 # 断言登录成功的账户是否在页面
-                self.Dv.return_register_page().try_except_dim(dim)
+                self.Dv.return_register_page().try_except_dim_phone(dim)
                 # 上划屏幕
                 self.Dv.return_register_page().up_slide()
                 # 点击退出当前账号
