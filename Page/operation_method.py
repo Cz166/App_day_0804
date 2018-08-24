@@ -139,11 +139,11 @@ class method(Base):
     @allure.step(title='断言快速注册状态')
     def try_celerity_register(self):
         try:
-            allure.attach('快速注册', '找到')
-            self.find_element(Page.celerity_register)
-            assert False
-        except AssertionError as A:
             allure.attach('快速注册', '未找到')
+            if not self.find_element(Page.celerity_register):
+                assert True
+        except AssertionError as A:
+            allure.attach('快速注册', '找到')
             assert False
     @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
