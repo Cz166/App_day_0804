@@ -1,0 +1,165 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1535102175180" stop="1535102250458">
+  <name>test_use_case.test_use_case_want_to_sell</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1535102175180" status="passed" stop="1535102250458">
+      <name>Test_Login.test_register[test_login_004-13198690728- aaa123456-\u8f93\u5165\u8d26\u53f7-\u8f93\u5165\u5bc6\u7801-1319869****-1-\u9a6c\u4e0a\u767b\u5f55]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="18596-MainThread"/>
+        <label name="host" value="DESKTOP-2H2UE1B"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1535102198247" status="passed" stop="1535102198325">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535102198325" status="passed" stop="1535102198403">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535102198403" status="passed" stop="1535102198491">
+          <name>向右滑动</name>
+          <title>向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1535102198491" status="passed" stop="1535102199598">
+          <name>点击启动页面_教程_进入爱优品按钮</name>
+          <title>点击启动页面_教程_进入爱优品按钮</title>
+          <attachments/>
+          <steps>
+            <step start="1535102198491" status="passed" stop="1535102199598">
+              <name>点击操作</name>
+              <title>点击操作</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1535102199598" status="passed" stop="1535102205645">
+          <name>点击始终允许</name>
+          <title>点击始终允许</title>
+          <attachments/>
+          <steps>
+            <step start="1535102199598" status="passed" stop="1535102205645">
+              <name>点击操作</name>
+              <title>点击操作</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+        <step start="1535102205660" status="passed" stop="1535102250458">
+          <name>测试用例_001_无前置条件_初始化App_点击我要卖_登录功能正确性验证</name>
+          <title>测试用例_001_无前置条件_初始化App_点击我要卖_登录功能正确性验证</title>
+          <attachments>
+            <attachment source="098ea281-b83d-465f-9d70-30e2080f3c49-attachment.txt" title="用例编号" type="text/plain"/>
+          </attachments>
+          <steps>
+            <step start="1535102205660" status="passed" stop="1535102206197">
+              <name>点击我要卖按钮</name>
+              <title>点击我要卖按钮</title>
+              <attachments/>
+              <steps>
+                <step start="1535102205660" status="passed" stop="1535102206197">
+                  <name>点击操作</name>
+                  <title>点击操作</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535102206197" status="passed" stop="1535102227842">
+              <name>输入账号、输入密码</name>
+              <title>输入账号、输入密码</title>
+              <attachments/>
+              <steps>
+                <step start="1535102206197" status="passed" stop="1535102215834">
+                  <name>输入操作</name>
+                  <title>输入操作</title>
+                  <attachments>
+                    <attachment source="81e12b7e-c377-4271-b624-bd53bfeff550-attachment.txt" title="输入账号" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+                <step start="1535102215834" status="passed" stop="1535102227842">
+                  <name>输入操作</name>
+                  <title>输入操作</title>
+                  <attachments>
+                    <attachment source="eb4aeea3-a681-4f74-8d28-d91bcc8719c1-attachment.txt" title="输入密码" type="text/plain"/>
+                  </attachments>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535102227842" status="passed" stop="1535102229019">
+              <name>点击登录按钮</name>
+              <title>点击登录按钮</title>
+              <attachments/>
+              <steps>
+                <step start="1535102227842" status="passed" stop="1535102229019">
+                  <name>点击操作</name>
+                  <title>点击操作</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1535102229019" status="failed" stop="1535102244149">
+              <name>断言我的按钮状态</name>
+              <title>断言我的按钮状态</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1535102244149" status="passed" stop="1535102246834">
+              <name>截图操作</name>
+              <title>截图操作</title>
+              <attachments>
+                <attachment source="38eaaa86-b3ca-49ed-bc5d-e70523a46bbc-attachment.txt" title="图片名字" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1535102246834" status="passed" stop="1535102250380">
+              <name>关闭登录信息页，断言关闭登陆信息输入页状态</name>
+              <title>关闭登录信息页，断言关闭登陆信息输入页状态</title>
+              <attachments>
+                <attachment source="e7ddf0eb-733b-47eb-a651-022e09176b70-attachment.txt" title="状态:" type="text/plain"/>
+              </attachments>
+              <steps>
+                <step start="1535102246834" status="passed" stop="1535102250380">
+                  <name>点击返回按钮</name>
+                  <title>点击返回按钮</title>
+                  <attachments/>
+                  <steps>
+                    <step start="1535102246834" status="passed" stop="1535102250380">
+                      <name>点击操作</name>
+                      <title>点击操作</title>
+                      <attachments/>
+                      <steps/>
+                    </step>
+                  </steps>
+                </step>
+              </steps>
+            </step>
+            <step start="1535102250380" status="passed" stop="1535102250458">
+              <name>断言我的按钮状态</name>
+              <title>断言我的按钮状态</title>
+              <attachments>
+                <attachment source="d1473311-9fe5-421f-a197-9912910e2ab6-attachment.txt" title="我的按钮" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
