@@ -61,6 +61,19 @@ class method(Base):
             self.screenshot()
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
+    @allure.step(title='断言快速注册是否存在')
+    def try_except_register(self):
+        try:
+            assert '快速注册' in self.gain_a_group_text()
+            allure.attach("快速注册", "找到")
+            return False
+        except:
+            allure.attach("快速注册", "未找到")
+            return True
+        finally:
+            self.screenshot()
+            allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
+
     @allure.step(title=' 获取页面元素列表')
     def gain_page_list(self):
         allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))

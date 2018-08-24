@@ -30,7 +30,7 @@ class Test_Login:
         if tag:
             try:
                 # 断言快速注册是否存在
-                self.Dv.return_register_page().try_except_dim('快速注册')
+                self.Dv.return_register_page().try_except_register()
                 # 获取页面元素列表
                 self.Dv.return_register_page().gain_page_list()
                 # 点击我的按钮
