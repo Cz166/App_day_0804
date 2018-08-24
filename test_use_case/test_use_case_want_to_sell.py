@@ -1,10 +1,8 @@
-from time import sleep
-
 import allure,pytest
 from Base.get_driver import get_driver
 from Data.input_yml import get_data
 from Page.return_page import return_page
-from Page.operation_method import method
+
 
 class Test_Login:
     def setup_class(self):
@@ -50,7 +48,6 @@ class Test_Login:
             except Exception as E:
                 # 截图
                 self.Dv.return_register_page().screenshot()
-                allure.attach('错误信息：', '{}'.format(E))
                 # 返回主页面
                 self.Dv.return_register_page().login_close_page()
                 # 断言页面是否包含我的按钮
