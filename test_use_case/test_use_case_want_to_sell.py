@@ -30,25 +30,21 @@ class Test_Login:
         if tag:
             try:
                 # 断言我的按钮是否存在
-                if self.Dv.return_register_page().try_my_button():
-                    # 点击我的按钮
-                    self.Dv.return_register_page().click_quit_accounts()
-                    # 判断账户是否在页面
-                    self.Dv.return_register_page().try_except_dim(dim)
-                    # 上划屏幕
-                    self.Dv.return_register_page().up_slide()
-                    # 点击退出当前账号
-                    self.Dv.return_register_page().click_quit_accounts()
-                    # 点击确定按钮
-                    self.Dv.return_register_page().click_confirm_quit()
-                    # 下滑屏幕
-                    self.Dv.return_register_page().below_slide()
-                    # 断言马上登录是否在页面
-                    self.Dv.return_register_page().try_except_dim(immediately_register)
-                else:
-                    self.Dv.return_register_page().screenshot()
-
-                    self.Dv.return_register_page().click_my_button()
+                self.Dv.return_register_page().try_my_button()
+                # 点击我的按钮
+                self.Dv.return_register_page().click_quit_accounts()
+                # 判断账户是否在页面
+                self.Dv.return_register_page().try_except_dim(dim)
+                # 上划屏幕
+                self.Dv.return_register_page().up_slide()
+                # 点击退出当前账号
+                self.Dv.return_register_page().click_quit_accounts()
+                # 点击确定按钮
+                self.Dv.return_register_page().click_confirm_quit()
+                # 下滑屏幕
+                self.Dv.return_register_page().below_slide()
+                # 断言马上登录是否在页面
+                self.Dv.return_register_page().try_except_dim(immediately_register)
             except Exception as E:
                 # 截图
                 self.Dv.return_register_page().screenshot()
@@ -56,6 +52,7 @@ class Test_Login:
                 self.Dv.return_register_page().login_close_page()
                 # 断言页面是否找到我的按钮
                 self.Dv.return_register_page().try_my_button()
+                assert False
         else:
             try:
                 # 登录失败，断言快速注册是否包含于页面
