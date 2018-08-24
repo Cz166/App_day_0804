@@ -32,7 +32,7 @@ class Test_Login:
                 # 断言我的按钮是否存在
                 self.Dv.return_register_page().try_my_button()
                 # 点击我的按钮
-                self.Dv.return_register_page().click_quit_accounts()
+                self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面
                 self.Dv.return_register_page().try_except_dim(dim)
                 # 上划屏幕
