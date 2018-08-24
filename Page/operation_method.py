@@ -129,7 +129,6 @@ class method(Base):
         try:
             self.find_element(Page.celerity_register)
             allure.attach('快速注册', '找到')
-            assert False
         except Exception as A:
             allure.attach('快速注册', '未找到')
     @allure.step(title='断言我的按钮状态')
