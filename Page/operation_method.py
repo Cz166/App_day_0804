@@ -141,10 +141,10 @@ class method(Base):
         try:
             allure.attach('快速注册', '找到')
             self.find_element(Page.celerity_register)
-            assert True
+            assert False
         except AssertionError as A:
             allure.attach('快速注册', '未找到')
-            assert False
+            assert True
     @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
         try:
