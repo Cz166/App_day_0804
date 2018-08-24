@@ -144,7 +144,7 @@ class method(Base):
             assert False
         except AssertionError as A:
             allure.attach('快速注册', '未找到')
-            assert True
+            assert False
     @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
         try:
