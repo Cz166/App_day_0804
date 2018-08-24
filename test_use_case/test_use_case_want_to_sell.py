@@ -34,7 +34,7 @@ class Test_Login:
                 # 点击我的按钮
                 self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面
-                self.Dv.return_register_page().try_except_dim_phone(dim)
+                self.Dv.return_register_page().try_except_dim(dim)
                 # 上划屏幕
                 self.Dv.return_register_page().up_slide()
                 # 点击退出当前账号

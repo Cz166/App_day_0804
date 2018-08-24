@@ -47,18 +47,6 @@ class method(Base):
        return self.driver.get_screenshot_as_file\
            ('E:/PyCharm 2017.3.4/App_08_04/Screenshot/register_001_%s.png' % now)
 
-    @allure.step(title='断言是否登录成功')
-    def try_except_dim_phone(self,dim_phone):
-        try:
-            assert dim_phone in self.gain_a_group_text()
-            allure.attach("页面元素查找状态", "找到")
-            return True
-        except:
-            allure.attach("页面元素查找状态", "未找到")
-            return False
-        finally:
-            self.screenshot()
-            allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
     @allure.step(title='断言页面是否成功跳转')
     def try_except_dim(self,dim):
@@ -127,7 +115,7 @@ class method(Base):
             return toast_message.text
         except Exception as e:
             return False
-    @allure.step(title='断言关闭登陆信息输入页状态')
+    @allure.step(title='关闭登录信息页，断言关闭登陆信息输入页状态')
     def login_close_page(self):
         try:
             # 关闭登陆信息输入页
@@ -139,8 +127,8 @@ class method(Base):
     @allure.step(title='断言快速注册状态')
     def try_celerity_register(self):
         try:
-            allure.attach('快速注册', '找到')
             self.find_element(Page.celerity_register)
+            allure.attach('快速注册', '找到')
             assert True
         except Exception as A:
             allure.attach('快速注册', '未找到')
@@ -151,7 +139,7 @@ class method(Base):
             self.find_element(Page.my_button)
             allure.attach('我的按钮', '找到')
             assert True
-        except Exception as A:
+        except:
             allure.attach('我的按钮', '未找到')
             assert False
 
