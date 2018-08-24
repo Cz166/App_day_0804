@@ -31,6 +31,8 @@ class Test_Login:
         # 断言
         if tag:
             try:
+                # 判断是否找到我的按钮
+                self.Dv.return_register_page().try_my_button()
                 # 点击我的按钮
                 self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面
