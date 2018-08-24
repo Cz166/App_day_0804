@@ -31,8 +31,6 @@ class Test_Login:
             try:
                 # 断言快速注册是否存在
                 self.Dv.return_register_page().try_except_register()
-                # 获取页面元素列表
-                self.Dv.return_register_page().gain_page_list()
                 # 点击我的按钮
                 self.Dv.return_register_page().click_my_button()
                 # 判断账户是否在页面
