@@ -50,9 +50,8 @@ class Test_Login:
                 self.Dv.return_register_page().screenshot()
                 # 返回主页面
                 self.Dv.return_register_page().login_close_page()
-                # 断言页面是否包含我的按钮
+                # 断言页面是否找到我的按钮
                 self.Dv.return_register_page().try_my_button()
-                assert False
         else:
             try:
                 # 登录失败，断言快速注册是否包含于页面
