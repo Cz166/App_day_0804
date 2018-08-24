@@ -61,6 +61,10 @@ class method(Base):
             self.screenshot()
             allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
 
+    @allure.step(title=' 获取页面元素列表')
+    def gain_page_list(self):
+        allure.attach('页面元素_(text_list)', '{}'.format(self.gain_a_group_text()))
+
     """初始页面"""
     @allure.step(title='点击启动页面_教程_进入爱优品按钮')
     def click_access_love_youpin(self):
@@ -129,17 +133,19 @@ class method(Base):
         try:
             self.find_element(Page.celerity_register)
             allure.attach('快速注册', '找到')
+            return False
         except Exception as A:
             allure.attach('快速注册', '未找到')
+            return True
     @allure.step(title='断言我的按钮状态')
     def try_my_button(self):
         try:
             self.find_element(Page.my_button)
             allure.attach('我的按钮', '找到')
-            assert True
+            return True
         except:
             allure.attach('我的按钮', '未找到')
-
+            return False
 
 
 

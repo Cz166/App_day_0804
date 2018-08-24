@@ -31,6 +31,8 @@ class Test_Login:
             try:
                 # 断言快速注册是否存在
                 self.Dv.return_register_page().try_celerity_register()
+                # 获取页面元素列表
+                self.Dv.return_register_page().gain_page_list()
                 # 上划屏幕
                 self.Dv.return_register_page().up_slide()
                 # 点击我的按钮
